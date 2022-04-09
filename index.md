@@ -1,6 +1,6 @@
-This is a file. 
+# Welcome to my page for CSE15. All lab reports can be found here: 
 
-[Lab Report 1](lab-report-1-week-2.md)
+[Lab report 1](lab-report-1-week-2.md)
 
 
 
