@@ -4,9 +4,8 @@
 
 
 #### **Part 1**: 
-The first thing to do is to download [VSCode](https://code. visualstudio.com/download) or install an IDE with a terminal
 
-* After downloading it, open it and it should look something like this:
+The first thing to do is to download [VSCode](https://code. visualstudio.com/download) or install an IDE with a terminal. After downloading it, open it and it should look something like this:
 
 
 ![VScode image](VSCODE.png)
@@ -22,7 +21,7 @@ Note: there is no password prompt because there is an ssh key that automatically
 
 #### **Part 3**:
 
-After you have successfully connected to the secure remote server, you can manipulate the files with various commands. Some of the commands include ( *cd ~ *, *ls*, *cd*, *mv*, *cp*)
+After you have successfully connected to the secure remote server, you can manipulate the files with various commands. Some of the commands include ( *ls*, *cd*, *mv*, *cp*)
 
 
 ![trying terminal commands](TryingNewCommands.png)
