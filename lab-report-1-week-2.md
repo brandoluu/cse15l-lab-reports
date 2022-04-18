@@ -19,7 +19,7 @@ After installing the IDE, Lookup your ieng6 account [here.](https://sdacs.ucsd.e
 ![RemoteAccess](Remoteaccess.png)
 Note: there is no password prompt because there is an ssh key that automatically allows access (this will be covered later). 
 
-#### **Part 3**:
+### Part 3:
 
 After you have successfully connected to the secure remote server, you can manipulate the files with various commands. Some of the commands include ( `ls`, `cd`, `mv`, `cp`)
 
@@ -27,7 +27,7 @@ After you have successfully connected to the secure remote server, you can manip
 ![trying terminal commands](TryingNewCommands.png)
 
 
-#### **Part 4**:
+### Part 4:
 
 In order to move a file from the local (your computer) to the remote server, you have to use the command `scp`. In order to do so, go to the console on your device and type in `scp <file name\> cse15lsp22xxx@ieng6.ucsd.edu:\~/`
 
@@ -35,7 +35,7 @@ In order to move a file from the local (your computer) to the remote server, you
 ![copying file](copyingfile.png)
 
 
-#### **Part 5**:
+### Part 5:
 
 Typing in the password when logging in to the secure server can be tedious, so we will generate a public ssh key to copy to the server to bypass this. To do so, type in the command `ssh-keygen` on the local terminal and answer the prompt with `/Users/USER-NAME/.ssh/id_rsa`. **Leave the passphrase prompt empty so you do not have to type a password** and then make a new .ssh directory in the remote server and copy the **public** key to the server. 
 
