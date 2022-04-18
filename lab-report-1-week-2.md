@@ -13,7 +13,7 @@ The first thing to do is to download [VSCode](https://code. visualstudio.com/dow
 There is a built in terminal in VScode, which can be opened by going to terminal -> new terminal. This will be used in order to remotely access the ieng6 server. 
 
 #### **Part 2**: 
-After installing the IDE, Lookup your ieng6 account [here.](https://sdacs.ucsd.edu/~icc/index.php) You may need to update your password so you can access the server. Go to the terminal and type in the command 'ssh cs15lsp22xxx@ieng6.ucsd.edu where xxx is a unique to you. There will be a password prompt where you enter your password. 
+After installing the IDE, Lookup your ieng6 account [here.](https://sdacs.ucsd.edu/~icc/index.php) You may need to update your password so you can access the server. Go to the terminal and type in the command `ssh cs15lsp22xxx@ieng6.ucsd.edu` where xxx is a unique to you. There will be a password prompt where you enter your password. 
 
 
 ![RemoteAccess](Remoteaccess.png)
