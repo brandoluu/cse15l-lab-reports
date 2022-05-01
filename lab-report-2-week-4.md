@@ -10,7 +10,8 @@ For this code change, there was an error in the implentation that caused an infi
 
 ![error message 1](errorMessage1.png)
 
-The symptom from this bug is that there is an infinite loop, which comes from the code checking the *[* and *]*. In an input where **only one** of these characters are present, there will be an infinite loop becuase the code will keep looking for the other bracket character. 
+The symptom that comes from this bug is that there is no more heap space, which means that there is an infinite loop that keeps on going until there is no more memory. This big is likely due to the implementation not checking if there is a 
+*[* or a *]* and stopping when the bracket is found.  
 
 * **Code Change 2**
 
@@ -30,6 +31,6 @@ This image shows a portion of the code where an empty array list will be returne
 
 ![ErrorMessage3](errorMessage3.png)
 
-There was a bug in the code that resulted in a symptom in the form of an infinite loop. Like the other two symptoms, this is due to the implementation not checking if there are opening and closing brackets in the same order and returning an empty array if so. 
+The symptom that results from the bug is that there is an infinite loop that does not finish the implementation. This symptom comes from a bug that loops through and looks for a closed bracket. In the case there is not a bracket in the md document, the code will constantly loop through the file. 
 
 
