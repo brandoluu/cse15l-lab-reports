@@ -6,27 +6,28 @@
 
 There were two tests that produced different results as seen here: 
 
-![Report1](Report5.1.png)
+
 ![Report2](Report5.2.png)
+![Report1](ReportFinal.png)
+>note: the differece for the second image is on line 346
 
-This was found by using the bash script and putting the output onto a new text file titled *results.txt*. For test file 135, the personal MarkdownParser returned an array with one value and the other did not. In test file 246, the personal MarkdownParser returned another array while the other one did not. 
+This was found by using the bash script and putting the output onto a new text file titled *results.txt*. For test file 194, the personal MarkdownParser returned an array with one value and the other did not. In test file 505, the personal MarkdownParser returned another array while the other one did not. 
 
-> Note: the two images come from the file 159.md and 211.md. test 159.md can be found [here](https://github.com/brandoluu/markdown-parser/blob/main/test-files/159.md) and 211.md can be found [here](https://github.com/brandoluu/markdown-parser/blob/main/test-files/211.md). *
+> Note: the two images come from the file 505.md and 194.md. test 505.md can be found [here](https://github.com/brandoluu/markdown-parser/blob/main/test-files/505.md) and 194.md can be found [here](https://github.com/brandoluu/markdown-parser/blob/main/test-files/211.md). 
 
 The output for the two markdown files are:
-![159](159.png)
-![211](211.png)
+![194](FinalScreenShot1.png)
+![211](FinalScreenShot2.png)
 
-As seen from the two images, the two images show that there are no links. However when looking at the results from the earlier images, the personal MardownParser returned an array with links while the other one did not. Therefore there is a bug in the personal MarkdownParser. 
+As seen from the two images,the first image shows that there is a link, however it is invalid. Therefore there is a bug in the personal markdownParser. However there is also a bug in the other markdownParser becuase the second image shows a valid link with parenthesis, and the other Parser did not conisder it valid. The two images show that there are bugs in both implementations of markdownParser. 
 
 
 
 
 ### Analyzing the bug in the code:
 ----------
-As mentioned previously, there is a bug in the personal MarkdownParser where an array of links will be returned even if the markdown file doensn't have any links. 
+As mentioned previously, there is a bug in both of the markdownParsers. Focusing on the other markdownParser, there seems to be bug where the inside of the parentheiss of a link is not taken sometimes.
 
-A possible error for this is that the implementation does not check for a valid link even if there are parenthesis and brackets invovled. Before the loop to parse whatever is after the *[]*, there are checks to see if the correct brackets are present in the file as shown below:
-![markdownparse.java](MarkdownParse8.png)
+This is possibly due to the implementation not checking if there is a valid link in the markdown parser. A solution that may fix this bug is to first check the markdown file to see if it contains the correct brackets needed. Then check if the order of the brackets are correct. After these conditions are fufilled then the link is valid and the contents of the link are added to the list. 
+![markdownparse.java](LastScreenshot.png)
 
-In order to make this implementation stronger, it would be a good idea to add a check if the brackets after the first square brackets are valid, in order to find a valid link. 
